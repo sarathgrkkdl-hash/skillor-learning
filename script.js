@@ -13,3 +13,50 @@ document.querySelectorAll('.rev').forEach(r=>obs.observe(r));
 window.addEventListener('scroll',()=>{
   document.querySelector('nav').style.background=window.scrollY>50?'rgba(30,14,56,0.98)':'rgba(45,21,80,0.97)';
 });
+
+const cards = Array.from(document.querySelectorAll('.card'));
+
+const fanRot  = [-25,-15,-5,5,15,25];
+const fanX    = [-200,-120,-40,40,120,200];
+const fanY    = [30,15,5,5,15,30];
+
+let hovIdx = -1;
+
+cards.forEach((card,i)=>{
+card.addEventListener("mouseenter",()=>{hovIdx=i;});
+card.addEventListener("mouseleave",()=>{hovIdx=-1;});
+});
+
+function animate(){
+cards.forEach((c,i)=>{
+
+let scale = 1;
+let opacity = 1;
+let blur = 0;
+let extraY = 0;
+
+if(hovIdx !== -1){
+if(i===hovIdx){
+scale=1.18;
+extraY=-40;
+}else{
+scale=0.9;
+opacity=0.15;
+blur=3;
+extraY=20;
+}
+}
+
+c.style.opacity=opacity;
+c.style.filter=`blur(${blur}px)`;
+c.style.transform=
+`translate(${fanX[i]}px,${fanY[i]+extraY}px)
+rotate(${fanRot[i]}deg)
+scale(${scale})`;
+
+});
+
+requestAnimationFrame(animate);
+}
+
+animate();

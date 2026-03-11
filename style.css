@@ -262,3 +262,102 @@ footer{background:#1e0e38;border-top:1px solid rgba(255,255,255,0.06);padding:54
 /* REVEAL */
 .rev{opacity:0;transform:translateY(26px);transition:opacity 0.65s ease,transform 0.65s ease;}
 .rev.vis{opacity:1;transform:translateY(0);}
+
+.cards-section{
+background:#2d1550;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 0;
+overflow:hidden;
+}
+
+.stage{
+position:relative;
+width:700px;
+height:340px;
+perspective:1000px;
+}
+
+.card{
+position:absolute;
+width:200px;
+height:300px;
+border-radius:26px;
+padding:24px 20px 20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+left:250px;
+top:20px;
+transform-origin:center bottom;
+opacity:0;
+transition:filter .2s;
+}
+
+.card:nth-child(1){background:#ffffff;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
+.card:nth-child(2){background:#fff200;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
+.card:nth-child(3){background:#5a2e99;color:#fff200;box-shadow:0 30px 70px rgba(0,0,0,.40);}
+.card:nth-child(4){background:#8e79ac;color:#ffffff;box-shadow:0 30px 70px rgba(0,0,0,.38);}
+.card:nth-child(5){background:#fff200;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
+.card:nth-child(6){background:#ffffff;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
+
+.card-title{
+font-size:30px;
+line-height:1;
+flex:1;
+display:flex;
+align-items:flex-end;
+}
+
+.card-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.learn-text{
+font-size:10px;
+letter-spacing:1.8px;
+text-transform:uppercase;
+}
+
+.arrow-btn{
+width:32px;
+height:32px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.card:nth-child(1) .arrow-btn,
+.card:nth-child(2) .arrow-btn,
+.card:nth-child(5) .arrow-btn,
+.card:nth-child(6) .arrow-btn{
+background:#422075;
+color:#fff200;
+}
+
+.card:nth-child(3) .arrow-btn{
+background:#fff200;
+color:#422075;
+}
+
+.card:nth-child(4) .arrow-btn{
+background:#ffffff;
+color:#422075;
+}
+
+.orb{
+position:absolute;
+top:16px;
+right:16px;
+width:44px;
+height:44px;
+border-radius:50%;
+}
+
+.card:nth-child(1) .orb{
+background:radial-gradient(circle at 35% 30%,#8e79ac,#422075);
+}
