@@ -184,7 +184,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:18px 6%;display:flex
 .mphoto{position:relative;}
 .mphoto-inner{width:100%;aspect-ratio:3/4;background:linear-gradient(150deg,#8e79ac,#422075);border-radius:22px;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;}
 .mphoto-inner::after{content:'Ayaan Sohail';position:absolute;bottom:0;left:0;right:0;padding:50px 20px 20px;background:linear-gradient(transparent,rgba(34,14,64,0.95));font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:#ffffff;}
-.mava{font-size:5.5rem;opacity:0.45;}
+/* .mava{font-size:5.5rem;opacity:0.45;} */
 .mexp{position:absolute;top:18px;right:-16px;background:#fff200;color:#2d1550;border-radius:12px;padding:11px 15px;text-align:center;font-family:'Syne',sans-serif;}
 .mexp strong{display:block;font-size:1.5rem;font-weight:800;}
 .mexp span{font-size:0.66rem;font-weight:700;text-transform:uppercase;}
@@ -264,24 +264,22 @@ footer{background:#1e0e38;border-top:1px solid rgba(255,255,255,0.06);padding:54
 .rev.vis{opacity:1;transform:translateY(0);}
 
 .cards-section{
-background:#2d1550;
+height:420px;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:120px 0;
-overflow:hidden;
 }
 
 .stage{
 position:relative;
 width:700px;
 height:340px;
-perspective:1000px;
 }
 
 .card{
 position:absolute;
-width:200px;
+overflow:hidden;
+width:230px;
 height:300px;
 border-radius:26px;
 padding:24px 20px 20px;
@@ -292,22 +290,29 @@ left:250px;
 top:20px;
 transform-origin:center bottom;
 opacity:0;
-transition:filter .2s;
 }
 
-.card:nth-child(1){background:#ffffff;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
-.card:nth-child(2){background:#fff200;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
-.card:nth-child(3){background:#5a2e99;color:#fff200;box-shadow:0 30px 70px rgba(0,0,0,.40);}
-.card:nth-child(4){background:#8e79ac;color:#ffffff;box-shadow:0 30px 70px rgba(0,0,0,.38);}
-.card:nth-child(5){background:#fff200;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
-.card:nth-child(6){background:#ffffff;color:#422075;box-shadow:0 30px 70px rgba(0,0,0,.35);}
+.card:nth-child(1){background:#ffffff;color:#422075;}
+.card:nth-child(2){background:#fff200;color:#422075;}
+.card:nth-child(3){background:#5a2e99;color:#fff200;}
+.card:nth-child(4){background:#8e79ac;color:#ffffff;}
+.card:nth-child(5){background:#fff200;color:#422075;}
+.card:nth-child(6){background:#ffffff;color:#422075;}
 
 .card-title{
-font-size:30px;
-line-height:1;
-flex:1;
-display:flex;
-align-items:flex-end;
+font-family:'Bebas Neue',sans-serif;
+font-size:28px;
+letter-spacing:1px;
+/* line-height:1.1;
+word-break:break-word;
+max-width:100%; */
+}
+
+.card-desc{
+font-family:'DM Sans',sans-serif;
+font-size:10px;
+opacity:.6;
+margin-bottom:10px;
 }
 
 .card-footer{
@@ -317,8 +322,8 @@ align-items:center;
 }
 
 .learn-text{
-font-size:10px;
-letter-spacing:1.8px;
+font-size:9px;
+letter-spacing:2px;
 text-transform:uppercase;
 }
 
@@ -331,33 +336,23 @@ align-items:center;
 justify-content:center;
 }
 
-.card:nth-child(1) .arrow-btn,
-.card:nth-child(2) .arrow-btn,
-.card:nth-child(5) .arrow-btn,
-.card:nth-child(6) .arrow-btn{
-background:#422075;
-color:#fff200;
-}
-
-.card:nth-child(3) .arrow-btn{
-background:#fff200;
-color:#422075;
-}
-
-.card:nth-child(4) .arrow-btn{
-background:#ffffff;
-color:#422075;
-}
-
 .orb{
 position:absolute;
 top:16px;
 right:16px;
-width:44px;
-height:44px;
+width:40px;
+height:40px;
 border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 }
+/* IMAGE SOHAIL */
 
-.card:nth-child(1) .orb{
-background:radial-gradient(circle at 35% 30%,#8e79ac,#422075);
+.mentor-img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  position:absolute;
+  bottom:0px;
 }

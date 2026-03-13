@@ -21,6 +21,9 @@ const fanX    = [-200,-120,-40,40,120,200];
 const fanY    = [30,15,5,5,15,30];
 
 let hovIdx = -1;
+let t = 0;
+
+
 
 cards.forEach((card,i)=>{
 card.addEventListener("mouseenter",()=>{hovIdx=i;});
@@ -28,12 +31,15 @@ card.addEventListener("mouseleave",()=>{hovIdx=-1;});
 });
 
 function animate(){
+
+  t += 0.02;
+
 cards.forEach((c,i)=>{
 
 let scale = 1;
 let opacity = 1;
 let blur = 0;
-let extraY = 0;
+let extraY = Math.sin(t + i) * 10;
 
 if(hovIdx !== -1){
 if(i===hovIdx){
