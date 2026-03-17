@@ -68,10 +68,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:18px 6%;display:flex
 
 /* LIMITED SEATS BADGE */
 
-.limited-seats{
+/* .limited-seats{
 position:absolute;
 top:-120px;
-right:230px;
+right:230px; */
 
 background:#fff200;
 color:#2d1550;
@@ -596,12 +596,12 @@ transform:scale(.7);
 }
 
 /* HERO FIX */
-.limited-seats{
+/* .limited-seats{
   top:-80px;
   right:10px;
   font-size:10px;
   padding:6px 12px;
-}
+} */
 
 /* CARDS FIX */
 .cards-section{
