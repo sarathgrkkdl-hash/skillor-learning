@@ -597,7 +597,7 @@ transform:scale(.7);
 
 /* HERO FIX */
 .limited-seats{
-  top:-20px;
+  top:-80px;
   right:10px;
   font-size:10px;
   padding:6px 12px;
@@ -633,4 +633,30 @@ transform:scale(.7);
 .video-showcase{
   height:60vh;
 }
+}
+
+@media (max-width:768px){
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* move logo to left */
+.logo{
+  order:1;
+}
+
+/* move menu to right */
+.menu-toggle{
+  order:3;
+  margin-left:auto;
+}
+
+/* keep nav links hidden menu */
+.nav-links{
+  order:2;
+}
+
 }
