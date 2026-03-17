@@ -535,3 +535,102 @@ transform:scale(.7);
 }
 
 }
+@media (max-width:768px){
+
+.nav-links{
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: #2d1550;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  transition: 0.4s;
+}
+
+.nav-links.active{
+  right: 0;
+}
+
+.menu-toggle{
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+}
+.menu-toggle{
+  display:none;
+}
+/* ============================= */
+/* MOBILE FIX (SAFE — NO DESKTOP BREAK) */
+/* ============================= */
+
+@media (max-width:768px){
+
+/* NAV FIX */
+.menu-toggle{
+  display:block;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+.nav-links{
+  position:fixed;
+  top:70px;
+  right:-100%;
+  width:70%;
+  height:100vh;
+  background:#2d1550;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:30px;
+  gap:20px;
+  transition:0.4s;
+}
+
+.nav-links.active{
+  right:0;
+}
+
+/* HERO FIX */
+.limited-seats{
+  top:-20px;
+  right:10px;
+  font-size:10px;
+  padding:6px 12px;
+}
+
+/* CARDS FIX */
+.cards-section{
+  height:auto;
+  padding:40px 20px;
+}
+
+.stage{
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  position:relative;
+}
+
+.card{
+  position:relative;
+  width:100%;
+  height:auto;
+  left:auto;
+  top:auto;
+  transform:none;
+  opacity:1;
+  filter:none;
+}
+
+/* VIDEO FIX */
+.video-showcase{
+  height:60vh;
+}
+}
