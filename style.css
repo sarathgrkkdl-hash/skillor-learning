@@ -257,15 +257,14 @@ animation:seatPulse 1.6s infinite;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  position: relative;
 }
 
 .tava img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
+
 .tauthor strong{font-size:0.84rem;display:block;color:#ffffff;}
 .tauthor span{font-size:0.72rem;color:rgba(255,255,255,0.5);}
 
@@ -673,4 +672,73 @@ nav{
   order:2;
 }
 
+}
+.video-section {
+  background: #2d1550 ;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 42px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.video-title em {
+  font-style: italic;
+}
+
+.video-sub {
+  color: #2d1550 ;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* .video-card {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid #2d1550 ;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 5;
+} */
+ .video-card {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+
+  /* FIXES */
+  background: #000; /* 🔥 makes video visible instantly */
+  border: 2px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.video-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* Forces correct size BEFORE play */
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.video-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #0b2a6f;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.video-btn:hover {
+  background: #081f50;
 }
